@@ -1,0 +1,250 @@
+/* =========== */
+/* Boilerplate */
+/* =========== */
+
+@viewport {
+  width: device-width;
+  zoom: 1;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 187.5%;
+}
+
+img {
+  max-width: 100%;
+}
+
+
+
+
+
+/* ===== */
+/* Theme */
+/* ===== */
+
+/* Colors */
+
+/* Holo White */
+:root {
+  --holo-pink: rgb(255,219,224);
+  --holo-violet: rgb(228,224,255);
+  --holo-purple: rgb(241,225,255);
+  --holo-blue: rgb(205,232,255);
+
+  --holo-intense-pink: rgb(255, 200, 207);
+  --holo-intense-violet: rgb(212, 206, 255);
+  --holo-intense-purple: rgb(233, 209, 255);
+  --holo-intense-blue: rgb(196, 227, 255);
+
+  --holo-white-gradient: radial-gradient(circle,
+                      white 18%,
+                      var(--holo-pink) 38%,
+                      var(--holo-violet) 58%,
+                      var(--holo-purple) 72%,
+                      var(--holo-blue) 80%,
+                      white 97%);
+
+  --holo-white-intense-gradient: radial-gradient(circle,
+                      white 18%,
+                      var(--holo-intense-pink) 38%,
+                      var(--holo-intense-violet) 58%,
+                      var(--holo-intense-purple) 72%,
+                      var(--holo-intense-blue) 80%,
+                      white 97%);
+}
+
+
+
+body {
+  font-family: 'Arial Rounded MT Bold';
+  color: #ffffff;
+}
+
+.about-text-hello {
+  background: white
+              var(--holo-white-intense-gradient);
+  text-shadow: -5px -5px 0px rgba(255, 255, 255, 0.82);
+}
+
+.fullstack-software-engineer {
+  background: white
+              var(--holo-white-gradient);
+}
+
+.about-text-hello,
+.fullstack-software-engineer {
+  background: white
+              var(--holo-white-intense-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -moz-text-fill-color: transparent;
+}
+
+
+/* ====== */
+/* Images */
+/* ====== */
+
+.tima-image-container {
+  max-width: 40%;
+  width: 30%;
+}
+
+
+.tima-image {
+  max-width: 100%;
+  border-radius: 50%;
+}
+
+.spice-icon {
+  width: 20%;
+}
+
+
+
+
+/* ========== */
+/* Typography */
+/* ========== */
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+
+
+
+
+/* ====== */
+/* Layout */
+/* ====== */
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0 3%;
+}
+
+.about-section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 5%;
+}
+
+.about-text {
+  max-width: 60%;
+}
+
+.about-text-other {
+  padding: 1px 15px;
+  background: rgba(85,124,172, 0.75);
+  border-radius: 10px;
+}
+
+.projects {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.cardamon,
+.anise,
+.cinnamon {
+  flex-basis: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  
+  padding: 0 20px;
+}
+
+.name-and-icon {
+  display: flex;
+}
+
+
+
+
+/* ====== */
+/* Clouds */
+/* ====== */
+
+.clouds {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+  z-index: -1;
+  overflow: hidden;
+  background: #557CAC;
+  background-size: cover;
+  background-position: top left;
+}
+
+.clouds .cloud {
+  position: absolute;
+  width: 2888px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-position: top left;
+}
+
+/* Can remove this for a different nice look */
+.clouds .cloud.level-one {
+  background-image: url(assets/cloud_1b.png);
+}
+
+.clouds .cloud.level-one.animate {
+  -webkit-animation: cloudpan 460s 0s infinite linear;
+          animation: cloudpan 460s 0s infinite linear;
+}
+
+.clouds .cloud.level-two {
+  background-image: url(assets/cloud_1a.png);
+}
+
+.clouds .cloud.level-two.animate {
+  -webkit-animation: cloudpan 300s 0s infinite linear;
+          animation: cloudpan 300s 0s infinite linear;
+}
+
+@-webkit-keyframes cloudpan {
+  from {
+    -webkit-transform: translateX(0) translateZ(0);
+            transform: translateX(0) translateZ(0);
+  }
+  to {
+    -webkit-transform: translateX(-100%) translateZ(0);
+            transform: translateX(-100%) translateZ(0);
+  }
+}
+
+@keyframes cloudpan {
+  from {
+    -webkit-transform: translateX(0) translateZ(0);
+            transform: translateX(0) translateZ(0);
+  }
+  to {
+    -webkit-transform: translateX(-100%) translateZ(0);
+            transform: translateX(-100%) translateZ(0);
+  }
+}
